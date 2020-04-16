@@ -1,0 +1,99 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-15T22:46:49.782Z",
+    "end": "2020-04-15T22:47:02.614Z",
+    "duration": 12832,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "034870bc-2215-457f-a84e-35ad05418c07",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\exam.js",
+      "file": "cypress\\integration\\examples\\exam.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6cb434c-74d9-42b1-9f7f-6acf48d6b166",
+          "title": "Mytest suite Bk",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test",
+              "fullTitle": "Mytest suite Bk test",
+              "timedOut": null,
+              "duration": 9354,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\n// should right display button name only\ncy.findAllByText('Home').should('exist');\ncy.findAllByText('Practice').should('exist');\ncy.get('#checkBoxOption1').check().should('be.checked').and('have.value', 'option1');\ncy.get('#checkBoxOption1').uncheck().should('not.be.checked');\ncy.get('input[type=\"checkbox\"]').check(['option2', 'option3']);\n//static and dynamic dropdown\ncy.get('select').select('option2').should('have.value', 'option2');\n//dynamic\ncy.get('#autocomplete').type('ind');\ncy.get('.ui-menu-item div').each(function ($ep, index, $list) {\n    if ($ep.text() === 'India') {\n        $ep.click();\n    }\n});\ncy.get('#autocomplete').should('have.value', 'India');\ncy.get('#displayed-text').should('be.visible');\ncy.get('#hide-textbox').should('be.visible');\ncy.get('#hide-textbox').click();\ncy.get('#displayed-text').should('not.be.visible');\ncy.get('#show-textbox').click();\ncy.get('#displayed-text').should('be.visible');\n//RADIO BUTTON\ncy.get('input[value=\"radio2\"]').check();\ncy.get('input[value=\"radio2\"]').click().should('be.visible', 'radio2');",
+              "err": {},
+              "uuid": "472f1b78-4031-4efc-9db5-ff2561d12791",
+              "parentUUID": "c6cb434c-74d9-42b1-9f7f-6acf48d6b166",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "472f1b78-4031-4efc-9db5-ff2561d12791"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {},
+      "version": "4.1.0"
+    }
+  }
+}
